@@ -9,7 +9,7 @@ export function logUser(email){
 }
 
 export function setGoals(goals){
-  const = action ={ 
+  const action={ 
     type: SET_GOALS,
     goals
   }
