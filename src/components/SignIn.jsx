@@ -1,4 +1,5 @@
 import React,{Component} from 'react'
+import {Link} from 'react-router'
 import { firebaseApp } from '../firebase'
 
 class SignIn extends Component{
@@ -13,10 +14,10 @@ class SignIn extends Component{
     }
   }
 
-  signUp(){
+  signIn(){
     console.log('this.state', this.state)
-  const {email,password} = this.state
-    firebaseApp.auth().createUserWithEmailAndPassword(email,password).catch(error =>{
+  const {email,password}=this.state
+    firebaseApp.auth().signInWithEmailAndPassword(email,password).catch(error =>{
       console.log('errors', error)
       this.setState({error})
     })
@@ -33,7 +34,7 @@ class SignIn extends Component{
           type='text'
           style={{marginRight:'5px'}}
           placeholder='email'
-          onChange = {event => this.setState({email: event.target.value})}
+          onChange={event => this.setState({email: event.target.value})}
           />
 
           <input 
@@ -41,7 +42,7 @@ class SignIn extends Component{
             type='password'
             style={{marginRight:'5px'}} 
             placeholder='password'
-            onChange = {event => this.setState({password: event.target.value})}
+            onChange={event => this.setState({password: event.target.value})}
             />
           <button
             className='btn btn-primary'
@@ -50,6 +51,7 @@ class SignIn extends Component{
           >Sign In </button>
           </div>
           <div>{this.state.error.message}</div>
+          <div><Link to={'/signup'}>Sign up instead</Link></div>
       </div>
       )
   }
