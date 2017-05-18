@@ -16,7 +16,7 @@ class GoalItem  extends Component{
     console.log('this.props.goal', this.props.goal)
     const{email,title} = this.props.goal
     return(
-        <div style={{margin:'5px'}}>
+        <div className='div-box' style={{margin:'5px'}}>
           <strong>{title}</strong>
           <span style={{marginRight:'5px'}}>submited by <em>{email}</em></span>
           <button

@@ -30,7 +30,7 @@ import {setCompleted} from '../actions'
               this.props.completeGoals.map((completeGoal, index) => {
                 const{title, email} = completeGoal
                 return (
-                    <div key={index}>
+                    <div className='completed-task' key={index}>
                       <strong>{title}</strong>completed by <em>{email}</em>
                     </div>
                   )

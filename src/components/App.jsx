@@ -13,11 +13,11 @@ class App extends Component{
 
   render(){
     return(
-      <div style={{margin:'5px'}}>
-      <h3>Goals</h3>
+      <div className="main-div" style={{margin:'5px'}}>
+      <h3>Flat To Do List</h3>
       <AddGoal  />
       <hr />
-      <h4>Goals</h4>
+      <h4>To do</h4>
       <GoalList />
       <hr />
       <h4>Complete Goals </h4>

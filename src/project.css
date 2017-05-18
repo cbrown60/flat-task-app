@@ -1,0 +1,31 @@
+body{
+/*  background-image: url(https://lh3.ggpht.com/YQTo-0hQ0ISjIZMnJPbl7C7FK52hWZfek5h0G4Zq7rwtemiZXwUJawghxsPQzu1KPJo=w300);*/
+background-color:  #4682b4;
+
+color:white;
+}
+
+.form-inline{
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.main-div{
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.div-box{
+  border: 2px solid red;
+  padding:5px;
+}
+
+.completed-task{
+  border: 2px solid green;
+  padding:5px;
+}
